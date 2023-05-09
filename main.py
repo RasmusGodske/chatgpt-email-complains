@@ -70,11 +70,10 @@ def generate_mail_body():
 
   result = completion.choices[0].message.content
 
+  # ChatGPT keep giving a random frustation level here, so I just added this section as a suffix
   suffix = "\n\n----\nThis email has been writing with {frustattion_level}% frustation and has been written with ChatGPT. The amount of frustation increases 1% every day.\nI just want to use my own account again, thanks!".format(frustattion_level=days_passed)
 
   result = result + suffix
-
-
 
   return  result
 
